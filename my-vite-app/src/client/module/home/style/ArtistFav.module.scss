@@ -1,0 +1,22 @@
+.avatar {
+  width: 150px; /* Sửa lại kích thước chính xác */
+  height: 150px;
+  object-fit: cover;
+  transition: all 0.2s ease;
+}
+.artistcontainer {
+  padding: 20px;
+  transition: all 0.2s ease;
+}
+.artistcontainer:hover {
+  cursor: pointer;
+
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  .name {
+    color: #ff6337;
+  }
+  .avatar{
+    transform: scale(1.1);
+  }
+}

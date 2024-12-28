@@ -1,0 +1,162 @@
+.header {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  justify-content: center; /* Horizontally center items */
+  background: #000;
+  padding: 0 16px;
+  height: 64px; /* Fixed header height */
+}
+.namemusicfooter {
+  color: #fff;
+}
+.cardsong {
+  background-color: #161616;
+  overflow: hidden;
+  width: 100% !important;
+  border: none;
+}
+
+.cardsongCol {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: relative; /* Đảm bảo thẻ này có vị trí riêng để z-index hoạt động */
+  z-index: 1; /* Đặt z-index mặc định cho các card */
+}
+.cardsongCol:hover {
+  transform:translateY(-10px); /* Dịch chuyển lên trên khi hover */
+  z-index: 10; /* Đặt giá trị z-index cao hơn khi hover */
+  cursor: pointer;
+}
+.cardsongCol:hover .cardsongTitle,
+.cardsongCol:hover .cardsongDescription,
+.cardsongCol:hover .title2line {
+  color: #ff6337;
+}
+.cardsongTitle,
+.cardsongDescription {
+  color: #fff;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  
+  height: 50px;
+}
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.songImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.playButton {
+  position: absolute;
+  top: 100%; /* Bắt đầu từ dưới cùng */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 32px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, top 0.3s ease;
+}
+
+.cardsongCol:hover .playButton {
+  opacity: 1;
+  top: 50%; /* Vị trí trung tâm khi hover */
+}
+
+.title {
+  color: #fff;
+  font-weight: bold;
+}
+.viewMore {
+  color: #ff6337;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  float: right;
+  text-decoration: none;
+}
+.viewMore:hover {
+  opacity: 0.8;
+  color: #ff6337;
+}
+.Card {
+  background-color: #000;
+  overflow: hidden;
+  border: none;
+}
+.songRankListCard {
+  background-color: #161616;
+  overflow: hidden;
+  border: none;
+  border-radius: 10px;
+  padding: 10px !important;
+  transition: background-color 0.3s ease;
+}
+.PrimaryColor {
+  color: #ff6337;
+}
+.colorWhite {
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+.songRankListCard:hover {
+  background-color: #ff6337;
+  cursor: pointer;
+}
+.iconAction:hover {
+  cursor: pointer;
+  color: #000;
+}
+.Divider {
+  background-color: #ff6337;
+  height: 2px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.footerUl {
+  list-style: none;
+  padding: 0;
+  li {
+    text-align: left;
+    padding: 5px 0;
+  }
+  li:hover {
+    color: #ff6337;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+// chiều cao bằng 2 dòng
+.title2line {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 40px;
+}
+.centerItem {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+.slider-container {
+  height: 400px; /* Tăng chiều cao tùy ý */
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+}
